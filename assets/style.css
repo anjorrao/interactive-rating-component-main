@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(217, 12%, 63%);
+  --dark-gray: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --darker-blue: hsl(216, 12%, 8%);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  font-size: 14px;
+  background-color: var(--darker-blue);
+  color: var(--light-gray);
+}
+
+.card {
+  background-color: hsla(213, 19%, 18%, 0.65);
+  border-radius: 20px;
+  width: 90%;
+  padding: 2rem 1rem;
+}
+
+div:last-child {
+  margin-bottom: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.thank-you-img {
+  display: block;
+  margin: 0 auto;
+  transform: scale(0.85);
+}
+
+h2 {
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+#rating-form {
+  display: inline-flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#rating-form .wrapper {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#rating-form .icon {
+  cursor: pointer;
+}
+
+#rating-form .icon:hover {
+  background-color: var(--primary-orange);
+  color: var(--white);
+}
+
+.rating-output {
+  display: inline-block;
+  color: var(--primary-orange);
+  background-color: hsla(213, 19%, 18%, 0.95);
+  padding: 0.5rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 20px;
+}
+
+.icon {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3.2rem;
+  border-radius: 50%;
+  background-color: hsla(216, 12%, 54%, 0.1);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: 0.5s;
+}
+
+.icon.selected {
+  background-color: var(--light-gray);
+  color: var(--white);
+}
+
+button {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 25px;
+  padding: 1rem 0;
+  box-shadow: none;
+  border: none;
+  transition: 0.5s;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+
+.attribution {
+  font-size: 1em;
+  position: absolute;
+  bottom: 10px;
+}
+
+.attribution a {
+  color: var(--primary-orange);
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    width: 25%;
+    padding: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
